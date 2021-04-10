@@ -40,17 +40,18 @@ dateEl.innerHTML = date;
 
 let hour = moment().format('H');
 
+var block = [nineAm, tenAm, elevenAm, twelvePm, onePm, twoPm, threePm, fourPm, fivePm];
+
 // Checks timeblocks to see if they're in the past, present, or future
-for (i = 0; i<9; i++) {
+for (i = 0; i < 9; i++) {
     let currentTime = i + 9;
     let currentBlock = block[i];
-}
 
 if (currentTime < hour) {
     currentBlock.classList.add("past");
-}else if (currentTime == hour) {
+} else if (currentTime == hour) {
     currentBlock.classList.add("present");
-}else (currentTime > hour); {
+} else (currentTime > hour); {
     currentBlock.classList.add("future");
 }
 
@@ -110,3 +111,34 @@ fiveBtnEl.addEventListener("click",function() {
     let fiveInput = document.getElementById("5input").value;
     localStorage.setItem("5pmEvent", fiveInput); 
 });
+
+// Pulls the saved events and displays them when the page is loaded
+let events = [];
+
+events[0] = localStorage.getItem("9amEvent");
+events[1] = localStorage.getItem("10amEvent");
+events[2] = localStorage.getItem("11amEvent");
+events[3] = localStorage.getItem("12pmEvent");
+events[4] = localStorage.getItem("1pmEvent");
+events[5] = localStorage.getItem("2pmEvent");
+events[6] = localStorage.getItem("3pmEvent");
+events[7] = localStorage.getItem("4pmEvent");
+events[8] = localStorage.getItem("5pmEvent");
+
+for(i=0; i < Events.length; i++) {
+      console.log(Events[i]);
+
+    if (Events[i] !== null) {
+        let setTime = i + "txt";
+        let savedEvent = Events[i];
+        console.log(savedEvent)
+
+        console.log(("."+ setTime))
+        let eventTxt = document.getElementsByClassName(setTime);
+        console.log(eventTxt[0])
+
+        let plans = eventTxt[0];
+
+        plans.value = savedEvent;
+    }
+}}
