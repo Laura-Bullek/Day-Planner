@@ -43,8 +43,8 @@ let hour = moment().format('H');
 
 // Checks timeblocks to see if they're in the past, present, or future
 for (i = 0; i<9; i++) {
-    var time = i + 9;
-    var currentblock = block[i];
+    let time = i + 9;
+    let currentblock = block[i];
 }
 
 if (time < hour) {
@@ -54,3 +54,20 @@ if (time < hour) {
 }else (time > hour); {
     currentblock.classList.add("future");
 }
+
+// Links to the DOM for textcontent in timeblocks
+let nineBtnEl = document.getElementById("9amBtn");
+let tenBtnEl = document.getElementById("10amBtn");
+let elevenBtnEl = document.getElementById("11amBtn");
+let twelveBtnEl = document.getElementById("12pmBtn");
+let oneBtnEl = document.getElementById("1pmBtn");
+let twoBtnEl = document.getElementById("2pmBtn");
+let threeBtnEl = document.getElementById("3pmBtn");
+let fourBtnEl = document.getElementById("4pmBtn");
+let fiveBtnEl = document.getElementById("5pmBtn");
+
+// Saves the timeblock events to local storage
+nineBtnEl.addEventListener("click",function() {
+    var nineInput = document.getElementById("9input").value;
+    localStorage.setItem("9amEvent", nineInput);  
+});
