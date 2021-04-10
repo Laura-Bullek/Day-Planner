@@ -40,19 +40,18 @@ dateEl.innerHTML = date;
 
 let hour = moment().format('H');
 
-
 // Checks timeblocks to see if they're in the past, present, or future
 for (i = 0; i<9; i++) {
-    let time = i + 9;
-    let currentblock = block[i];
+    let currentTime = i + 9;
+    let currentBlock = block[i];
 }
 
-if (time < hour) {
-    currentblock.classList.add("past");
-}else if (time == hour) {
-    currentblock.classList.add("present");
-}else (time > hour); {
-    currentblock.classList.add("future");
+if (currentTime < hour) {
+    currentBlock.classList.add("past");
+}else if (currentTime == hour) {
+    currentBlock.classList.add("present");
+}else (currentTime > hour); {
+    currentBlock.classList.add("future");
 }
 
 // Links to the DOM for textcontent in timeblocks
@@ -68,6 +67,46 @@ let fiveBtnEl = document.getElementById("5pmBtn");
 
 // Saves the timeblock events to local storage
 nineBtnEl.addEventListener("click",function() {
-    var nineInput = document.getElementById("9input").value;
+    let nineInput = document.getElementById("9input").value;
     localStorage.setItem("9amEvent", nineInput);  
+});
+
+tenBtnEl.addEventListener("click",function() {
+    let tenInput = document.getElementById("10input").value;
+    localStorage.setItem("10amEvent", tenInput);
+});
+
+elevenBtnEl.addEventListener("click",function() {
+    let elevenInput = document.getElementById("11input").value;
+    localStorage.setItem("11amEvent", elevenInput);
+});
+
+twelveBtnEl.addEventListener("click",function() {
+    let twelveInput = document.getElementById("12input").value;
+    localStorage.setItem("12pmEvent", twelveInput);
+});
+
+oneBtnEl.addEventListener("click",function() {
+    let oneInput = document.getElementById("1input").value;
+    localStorage.setItem("1pmEvent", oneInput);
+});
+
+twoBtnEl.addEventListener("click",function() {
+    let twoInput = document.getElementById("2input").value;
+    localStorage.setItem("2pmEvent", twoInput);
+});
+
+threeBtnEl.addEventListener("click",function() {
+    let threeInput = document.getElementById("3input").value;
+    localStorage.setItem("3pmEvent", threeInput);
+});
+
+fourBtnEl.addEventListener("click",function() {
+    let fourInput = document.getElementById("4input").value;
+    localStorage.setItem("4pmEvent", fourInput);
+});
+    
+fiveBtnEl.addEventListener("click",function() {
+    let fiveInput = document.getElementById("5input").value;
+    localStorage.setItem("5pmEvent", fiveInput); 
 });
