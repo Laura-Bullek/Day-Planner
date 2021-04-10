@@ -3,9 +3,10 @@
 ## Description
 The **Day-Planner** project is the fourth homework assignment of the March 2021 cohort from University of New Hampshire's full-stack coding bootcamp. 
 
-Allowing us to use the skills covered in this week's course, this project was created to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface.
+Allowing us to use the skills covered in this week's course, this project was created to build a simple calendar application that allows a user to save events for each hour of the day by modifying starter code.
 
-This project also includes Bootstrap, uses of local storage, and CSS animation. 
+
+This project also includes Moment.js, Bootstrap, uses of local storage, and jQuery. 
 
 ## User Story
  -  AS AN employee with a busy schedule
@@ -33,10 +34,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
-![Code Quiz Screenshot](https://i.postimg.cc/RhKK7m2S/Code-Quiz-Screencapture-1.png)
-![Code Quiz Screenshot](https://i.postimg.cc/ydF8nN6b/Code-Quiz-Screenshot-2.png)
-![Code Quiz Screenshot](https://i.postimg.cc/R0tSV0tZ/Code-Quiz-Screenshot-3.png)
-
+![Day Planner Screenshot](https://i.postimg.cc/pTR6kQLr/Day-Planner-Screenshot-1.png)
 
 ## Installation
 No installations required for this project.
@@ -49,8 +47,8 @@ March 2021 cohort instructors:
 - TA - Casey Ferguson [GitHub](https://github.com/cferg019)
 
 ## Usage
-* [GitHub Repository](https://github.com/Laura-Bullek/Code-Quiz)
-* [Deployed Main Application](https://laura-bullek.github.io/Code-Quiz/)
+* [GitHub Repository](https://github.com/Laura-Bullek/Day-Planner)
+* [Deployed Main Application](https://laura-bullek.github.io/Day-Planner/)
 
 ## Licensing
 MIT License
