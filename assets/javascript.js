@@ -40,6 +40,17 @@ dateEl.innerHTML = date;
 
 let hour = moment().format('H');
 
-let fiveOclock = $("#17oclock");
 
+// Checks timeblocks to see if they're in the past, present, or future
+for (i = 0; i<9; i++) {
+    var time = i + 9;
+    var currentblock = block[i];
+}
 
+if (time < hour) {
+    currentblock.classList.add("past");
+}else if (time == hour) {
+    currentblock.classList.add("present");
+}else (time > hour); {
+    currentblock.classList.add("future");
+}
