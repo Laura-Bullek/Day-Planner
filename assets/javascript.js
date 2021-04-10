@@ -18,3 +18,16 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 // - What happens the next day or later in the hours after the events persist?
+
+// Link elements to the DOM
+var dateEl = document.getElementById("currentDay");
+var schedule = document.querySelector("container")
+
+// Making the dates using Moment.js
+var date1 = moment().format('dddd');
+var date2 = moment().format('MMM Do');
+date = date1 + " " + date2;
+dateEl.innerHTML = date;
+
+var hour = moment().format('H');
+
