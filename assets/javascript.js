@@ -18,9 +18,3 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 // - What happens the next day or later in the hours after the events persist?
-
-$(document).ready(function(){
-    $("#currentDay").text(moment().format("MMMM Do YYYY"));
-
-    let currentTime = parseInt(moment().format("H"));
-});
