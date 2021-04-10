@@ -20,14 +20,26 @@
 // - What happens the next day or later in the hours after the events persist?
 
 // Link elements to the DOM
-var dateEl = document.getElementById("currentDay");
-var schedule = document.querySelector("container")
+let dateEl = document.getElementById("currentDay");
+let schedule = document.querySelector("container");
+let nineAm = document.getElementById("9");
+let tenAm = document.getElementById("10");
+let elevenAm = document.getElementById("11");
+let twelvePm = document.getElementById("12");
+let onePm = document.getElementById("13");
+let twoPm = document.getElementById("14");
+let threePm = document.getElementById("15");
+let fourPm = document.getElementById("16");
+let fivePm = document.getElementById("17oclock");
 
 // Making the dates using Moment.js
-var date1 = moment().format('dddd');
-var date2 = moment().format('MMM Do');
+let date1 = moment().format('dddd');
+let date2 = moment().format('MMM Do');
 date = date1 + " " + date2;
 dateEl.innerHTML = date;
 
-var hour = moment().format('H');
+let hour = moment().format('H');
+
+let fiveOclock = $("#17oclock");
+
 
