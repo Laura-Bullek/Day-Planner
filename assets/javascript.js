@@ -39,7 +39,6 @@ date = date1 + " " + date2;
 dateEl.innerHTML = date;
 
 let hour = moment().format('H');
-// Changing from a string to a number
 hour = parseInt(hour);
 
 var block = [nineAm, tenAm, elevenAm, twelvePm, onePm, twoPm, threePm, fourPm, fivePm];
