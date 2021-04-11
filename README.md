@@ -34,7 +34,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
-![Day Planner Screenshot](https://i.postimg.cc/pTR6kQLr/Day-Planner-Screenshot-1.png)
+![Day Planner Animation](https://i.postimg.cc/PfWdG3dx/Day-Planner-Gif.gif)
 
 ## Installation
 No installations required for this project.
