@@ -39,6 +39,8 @@ date = date1 + " " + date2;
 dateEl.innerHTML = date;
 
 let hour = moment().format('H');
+// Changing from a string to a number
+hour = parseInt(hour);
 
 var block = [nineAm, tenAm, elevenAm, twelvePm, onePm, twoPm, threePm, fourPm, fivePm];
 
@@ -47,12 +49,15 @@ for (i = 0; i < 9; i++) {
     let currentTime = i + 9;
     let currentBlock = block[i];
 
-if (currentTime < hour) {
-    currentBlock.classList.add("past");
-} else if (currentTime == hour) {
-    currentBlock.classList.add("present");
-} else (currentTime > hour); {
-    currentBlock.classList.add("future");
+    console.log({ hour, currentTime });
+
+    if (currentTime < hour) {
+        currentBlock.classList.add("past");
+    } else if (currentTime == hour) {
+        currentBlock.classList.add("present");
+    } else {
+        currentBlock.classList.add("future");
+    }
 }
 
 // Links to the DOM for textcontent in timeblocks
@@ -67,49 +72,49 @@ let fourBtnEl = document.getElementById("4pmBtn");
 let fiveBtnEl = document.getElementById("5pmBtn");
 
 // Saves the timeblock events to local storage
-nineBtnEl.addEventListener("click",function() {
+nineBtnEl.addEventListener("click", function () {
     let nineInput = document.getElementById("9input").value;
-    localStorage.setItem("9amEvent", nineInput);  
+    localStorage.setItem("9amEvent", nineInput);
 });
 
-tenBtnEl.addEventListener("click",function() {
+tenBtnEl.addEventListener("click", function () {
     let tenInput = document.getElementById("10input").value;
     localStorage.setItem("10amEvent", tenInput);
 });
 
-elevenBtnEl.addEventListener("click",function() {
+elevenBtnEl.addEventListener("click", function () {
     let elevenInput = document.getElementById("11input").value;
     localStorage.setItem("11amEvent", elevenInput);
 });
 
-twelveBtnEl.addEventListener("click",function() {
+twelveBtnEl.addEventListener("click", function () {
     let twelveInput = document.getElementById("12input").value;
     localStorage.setItem("12pmEvent", twelveInput);
 });
 
-oneBtnEl.addEventListener("click",function() {
+oneBtnEl.addEventListener("click", function () {
     let oneInput = document.getElementById("1input").value;
     localStorage.setItem("1pmEvent", oneInput);
 });
 
-twoBtnEl.addEventListener("click",function() {
+twoBtnEl.addEventListener("click", function () {
     let twoInput = document.getElementById("2input").value;
     localStorage.setItem("2pmEvent", twoInput);
 });
 
-threeBtnEl.addEventListener("click",function() {
+threeBtnEl.addEventListener("click", function () {
     let threeInput = document.getElementById("3input").value;
     localStorage.setItem("3pmEvent", threeInput);
 });
 
-fourBtnEl.addEventListener("click",function() {
+fourBtnEl.addEventListener("click", function () {
     let fourInput = document.getElementById("4input").value;
     localStorage.setItem("4pmEvent", fourInput);
 });
-    
-fiveBtnEl.addEventListener("click",function() {
+
+fiveBtnEl.addEventListener("click", function () {
     let fiveInput = document.getElementById("5input").value;
-    localStorage.setItem("5pmEvent", fiveInput); 
+    localStorage.setItem("5pmEvent", fiveInput);
 });
 
 // Pulls the saved events and displays them when the page is loaded
@@ -125,15 +130,15 @@ events[6] = localStorage.getItem("3pmEvent");
 events[7] = localStorage.getItem("4pmEvent");
 events[8] = localStorage.getItem("5pmEvent");
 
-for(i=0; i < Events.length; i++) {
-      console.log(Events[i]);
+for (i = 0; i < events.length; i++) {
+    console.log(events[i]);
 
-    if (Events[i] !== null) {
+    if (events[i] !== null) {
         let setTime = i + "txt";
-        let savedEvent = Events[i];
+        let savedEvent = events[i];
         console.log(savedEvent)
 
-        console.log(("."+ setTime))
+        console.log(("." + setTime))
         let eventTxt = document.getElementsByClassName(setTime);
         console.log(eventTxt[0])
 
@@ -141,4 +146,4 @@ for(i=0; i < Events.length; i++) {
 
         plans.value = savedEvent;
     }
-}}
+}
